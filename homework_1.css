@@ -32,6 +32,10 @@ body {
     color: rgb(116, 110, 110);
 }
 
+.sidebar_left label:last-child {
+    padding-bottom: 30px;
+}
+
 #padd {
     display: flex;
     justify-content: center;
@@ -48,6 +52,7 @@ input[type = text] {
     border-top: 1.5px solid grey;
     border-left: 1.5px solid grey;
     border-radius: 4px;
+    padding-left: 15px;
 }
 
 .input_but {
@@ -106,7 +111,7 @@ input[type = submit] {
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .check:after {
     content: "";
-    position: absolute;
+    position: relative;
     display: none;
   }
 
@@ -117,8 +122,8 @@ input[type = submit] {
 
   /* Style the indicator (dot/circle) */
 .input_radio .check:after {
-    top: 9px;
-    left: 18px;
+    top: 6px;
+    left: 6px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -131,4 +136,24 @@ input[type = submit] {
     flex: 1;
     text-align: center;
     color: rgb(116, 110, 110);
+}
+
+@media (min-width: 800px){
+    .sidebar_right {
+        border-left: 2px solid darkgrey;
+        border-radius: 1px;
+    }
+    .wrapper{
+        flex-direction: row;
+    }
+}
+@media (max-width: 800px){
+    .sidebar_right {
+        border-top: 2px solid darkgrey;
+        border-radius: 1px;
+        padding-top: 20px;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
 }
