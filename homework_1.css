@@ -12,10 +12,6 @@ body {
     text-align: center;
   }
 
-.wrapper div {
-    border: 1px solid black;
-}
-
 .wrapper > * {
     flex: 1 100%;
   }
@@ -34,17 +30,28 @@ body {
     font-size: 20px;
     flex: 1;
     color: rgb(116, 110, 110);
-    text-align: center;
 }
 
+#padd {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 /*Text box*/
 input[type = text] {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 16px;
     opacity: 0.5;
     height: 25px;
-    border: 1.2px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-top: 1.5px solid grey;
+    border-left: 1.5px solid grey;
     border-radius: 4px;
+}
+
+.input_but {
+    padding-bottom: 20px;
 }
 
 /*Button*/
@@ -73,7 +80,7 @@ input[type = submit] {
     display: flex;
     position: relative;
     top: -13px;
-    left: 10px;
+    left: 15px;
 }
 
 .check {
@@ -87,7 +94,7 @@ input[type = submit] {
 .radio {
     display: flex;
     position: relative;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-top: 1px;
     margin-bottom: -30px;
 }
