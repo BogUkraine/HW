@@ -7,22 +7,49 @@
     </head>
     <body>
         <div class = "wrapper">
-             <div class = "header">TODO List</div>
+             <div class = "header"><h1>TODO List</h1></div>
              <div class = "sidebar_left">
-                 <p>Pure JavaScript</p>
-                 <div class = "input_but">
-                    <input type = "text" placeholder = "What to do?">
-                    <input type = "submit" value = "Button">
+                 <h2>Pure JavaScript</h2>
+                 <div class = "input_button">
+                    <input type = "text" placeholder = "What to do?" class = "textBox">
+                    <input type = "button" value = "Button" class = "button">
                  </div>
                  <div class = "input_radio">
-                    <p><input type = "radio" name = "rb">This is a list item</p>
-                    <p><input type = "radio" name = "rb">Another list item</p>
-                    <p><input type = "radio" name = "rb">Yup, another list item</p>
-                    <p><input type = "radio" name = "rb">Another list item</p>
-                    <p><input type = "radio" name = "rb">This is a list item</p>
+                    <ul>
+                        <li>
+                        <label class = "radio">
+                            <input type = "radio" name = "rb">
+                            <span class = "check"></span><p>This is a list item</p>
+                        </label>
+                        </li>
+                        <li>
+                        <label class = "radio">
+                            <input type = "radio" name = "rb">
+                            <span class = "check"></span><p>Another list item</p>
+                        </label>
+                        </li>
+                        <li>
+                        <label class = "radio">
+                            <input type = "radio" name = "rb">
+                            <span class = "check"></span><p>Yup, another list item</p>
+                        </label>
+                        </li>
+                        <li>
+                        <label class = "radio">
+                            <input type = "radio" name = "rb">
+                            <span class = "check"></span><p>Another list item</p>
+                        </label>
+                        </li>
+                        <li>
+                        <label class = "radio">
+                            <input type = "radio" name = "rb">
+                            <span class = "check"></span><p>This is a list item</p>
+                        </label>
+                        </li>
+                    </ul>
                 </div>
              </div>
-             <div class = "sidebar_right">ReactJS</div>
+             <div class = "sidebar_right"><h2>ReactJS</h2></div>
         </div>
     </body>
 </html>
