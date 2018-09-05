@@ -14,17 +14,11 @@ body {
 
 .wrapper > * {
     flex: 1 100%;
-  }
-<<<<<<< HEAD
+}
 /***************/
 /* header */
 h1 {
-=======
 
-/***************/
-/* header */
-.header {
->>>>>>> master
     font-size: 24px;
     color: #666666;
 }
@@ -34,21 +28,13 @@ h2 {
     font-size: 20px;
     color: #666666;
 }
-
-<<<<<<< HEAD
 ul {
     list-style-type: none;
 }
-=======
-/***************/
-/*left sidebar*/
->>>>>>> master
+
 .sidebar_left {
     flex: 1;
-<<<<<<< HEAD
-=======
     color: rgb(116, 110, 110);
->>>>>>> master
 }
 
 .sidebar_left label:last-child {
@@ -61,12 +47,7 @@ ul {
     margin-bottom: 20px;
 }
 /*Text box*/
-<<<<<<< HEAD
 .textBox {
-=======
-input[type = text] {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
->>>>>>> master
     font-size: 16px;
     opacity: 0.5;
     height: 25px;
@@ -77,22 +58,12 @@ input[type = text] {
     border-radius: 4px;
     padding-left: 15px;
 }
-
-<<<<<<< HEAD
 .input_button {
-=======
-.input_but {
->>>>>>> master
     padding-bottom: 20px;
 }
 
 /*Button*/
-<<<<<<< HEAD
 .button {
-=======
-input[type = submit] {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
->>>>>>> master
     font-size: 16px;
     width: 110px;
     height: 32px;
@@ -102,12 +73,9 @@ input[type = submit] {
 }
 
 /*RadioButtons*/
-<<<<<<< HEAD
 label {
     display: block;
 }
-=======
->>>>>>> master
 .input_radio {
     font-size: 16px;
     text-align: left;
@@ -122,11 +90,8 @@ label {
     display: flex;
     position: relative;
     top: -13px;
-<<<<<<< HEAD
     left: 2px;
-=======
-    left: 15px;
->>>>>>> master
+
 }
 
 .check {
@@ -140,15 +105,9 @@ label {
 .radio {
     display: flex;
     position: relative;
-<<<<<<< HEAD
     padding-left: 10px;
     padding-top: 1px;
     margin-bottom: -40px;
-=======
-    padding-left: 30px;
-    padding-top: 1px;
-    margin-bottom: -30px;
->>>>>>> master
 }
 
 .input_radio input:checked ~ .check {
