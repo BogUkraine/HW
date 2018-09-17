@@ -11,11 +11,19 @@ body {
  }
  .wrapper > * {
     flex: 1 100%;
+<<<<<<< HEAD
   }
 
 /***************/
 /* header */
 h1 {
+=======
+}
+/***************/
+/* header */
+h1 {
+
+>>>>>>> week2
     font-size: 24px;
     color: #666666;
 }
@@ -28,12 +36,20 @@ h2 {
     font-size: 20px;
     color: #666666;
 }
+<<<<<<< HEAD
  ul {
+=======
+ul {
+>>>>>>> week2
     list-style-type: none;
 }
 
 .sidebar_left {
     flex: 1;
+<<<<<<< HEAD
+=======
+    color: rgb(116, 110, 110);
+>>>>>>> week2
 }
 
 .sidebar_left label:last-child {
@@ -61,7 +77,12 @@ h2 {
 .input_button {
     padding-bottom: 20px;
 }
+<<<<<<< HEAD
  /*Button*/
+=======
+
+/*Button*/
+>>>>>>> week2
 .button {
     font-size: 16px;
     width: 110px;
@@ -88,6 +109,10 @@ label {
     position: relative;
     top: -13px;
     left: 2px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> week2
 }
  .check {
     height: 20px;
