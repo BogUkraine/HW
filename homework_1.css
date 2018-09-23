@@ -79,12 +79,15 @@ h2 {
 .hide_button {
     width: 180px;
     margin-bottom: 10px;
-    margin-top: -10
+    margin-top: -10;
+    visibility: hidden;
 }
 
 .show_button {
     width: 180px;
     margin-bottom: 10px;
+    margin-top: -10px;
+    visibility: hidden;
 }
 /*RadioButtons*/
 label {
