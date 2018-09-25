@@ -50,15 +50,17 @@ const createListItem = (textp) => {
         }
     }, false);
 
-    label.addEventListener('click', () => {
+    input.addEventListener('change', (event) => {
         if(input.checked){
             ul_checked.appendChild(item);
             console.log("if");
+    
         }
         else{
             ul_unchecked.appendChild(item);
             console.log("else");
         }
+        console.log(event.target.value);
     });
     /*
     label.addEventListener('click', (event) => {
