@@ -1,5 +1,7 @@
 const btn = document.querySelector('.form_button');
 
-btn.addEventListener('click', () => {
+const add_button = btn.addEventListener('click', () => {
     createListItem("");
 }, false);
+
+export default add_button;

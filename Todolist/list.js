@@ -1,10 +1,3 @@
-var array = [
-    "This is a list item",
-    "Another list item",
-    "Yup, another item",
-    "Another list item2",
-    "This is blablabla"
-];
 var bool_hid_button = false;
 var bool_checked = false;
 
@@ -12,7 +5,7 @@ const textBox = document.querySelector('.textBox');
 const ul_checked = document.querySelector('.show_hide_buttons');
 const ul_unchecked = document.querySelector('.check_elements_ul');
 
-const createListItem = (textp) => {
+export const createListItem = (textp) => {
     const item = document.createElement('li');
     const label = document.createElement('label');
     const input = document.createElement('input');
@@ -51,22 +44,7 @@ const createListItem = (textp) => {
     }, false);
 
     input.addEventListener('change', (event) => {
-        if(input.checked){
-            ul_checked.appendChild(item);
-            console.log("if");
-    
-        }
-        else{
-            ul_unchecked.appendChild(item);
-            console.log("else");
-        }
-        console.log(event.target.value);
-    });
-    /*
-    label.addEventListener('click', (event) => {
         if(input.checked == true){
-            event.stopPropagation();
-            console.log('bool_da = '+ bool_hid_button)
             ul_checked.appendChild(item);
             p.style.textDecoration = 'line-through';
             p.style.opacity = '0.5';
@@ -79,7 +57,6 @@ const createListItem = (textp) => {
                 item.style.visibility = "visible";
         }
         else{
-            console.log('bool_no = ' + bool_hid_button)
             ul_unchecked.appendChild(item);
             item.style.visibility = "visible";
             p.style.textDecoration = '';
@@ -91,10 +68,5 @@ const createListItem = (textp) => {
                 bool_hid_button = false;
             }
         }
-    }, false);*/
+    }, false);
 }
-
-for(let i = 0; i < array.length; i++){
-    createListItem(array[i]);
-}
-
