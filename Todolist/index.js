@@ -1,4 +1,3 @@
-import { createListItem } from "./list.js";
 import {add_button} from "./button_add.js";
 import {hide_button, show_button}  from "./buttons.js";
 
@@ -11,7 +10,6 @@ var array = [
 ];
 
 window.addEventListener('load', () => {
-    createListItem();
     add_button();
     hide_button();
     show_button();
