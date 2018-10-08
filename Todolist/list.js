@@ -5,7 +5,7 @@ const textBox = document.querySelector('.textBox');
 const ul_checked = document.querySelector('.show_hide_buttons');
 const ul_unchecked = document.querySelector('.check_elements_ul');
 
-export const createListItem = (textp) => {
+export const createListItem = () => {(textp) => {
     const item = document.createElement('li');
     const label = document.createElement('label');
     const input = document.createElement('input');
@@ -69,4 +69,5 @@ export const createListItem = (textp) => {
             }
         }
     }, false);
+}
 }
