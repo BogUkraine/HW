@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./homework_1.css";
 import {add_button} from "./button_add.js";
 import {hide_button, show_button}  from "./buttons.js";
 import {createListItem} from "./list.js"
@@ -20,10 +21,4 @@ window.addEventListener('load', () => {
     add_button();
     hide_button();
     show_button();
-
-    /*
-    for(let i = 0; i < array.length; i++){
-        createListItem(array[i]);
-    }
-    */
 });
