@@ -1,22 +1,13 @@
 const hide_but = document.querySelector(".hide_button");
 const show_but = document.querySelector(".show_button");
+const ul_checked = document.querySelector('.show_hide_buttons');
 
 export const show_button = () => { show_but.addEventListener('click', () => {
-    for(let i = 1; i < ul_checked.childNodes.length; i++){
-        ul_checked.childNodes[i].style.visibility = 'visible';
-    }
-    bool_hid_button = true;
-    show_but.style.visibility = 'hidden';
-    hide_but.style.visibility = 'visible';
+    ul_checked.style.display = "block";
 }, false);
 }
 
 export const hide_button = () => { hide_but.addEventListener('click', () => {
-    for(let i = 1; i < ul_checked.childNodes.length; i++){
-        ul_checked.childNodes[i].style.visibility = 'hidden';
-    }
-    bool_hid_button = false; 
-    show_but.style.visibility = 'visible';
-    hide_but.style.visibility = 'hidden';
+    ul_checked.style.display = "none";
 }, false);
 }
