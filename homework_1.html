@@ -3,53 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title>Todo list</title>
-        <link rel="stylesheet" href="homework_1.css">
+        <link rel = "stylesheet" href = "./dist/main.css">
     </head>
     <body>
         <div class = "wrapper">
-            <div class = "header"><h1>TODO List</h1></div>
-            <div class = "sidebar_left">
-                <h2>Pure JavaScript</h2>
-                <div class = "input_button">
+             <div class = "header"><h1>TODO List</h1></div>
+             <div class = "sidebar_left">
+                 <h2>Pure JavaScript</h2>
+                 <div class = "input_button">
                     <input type = "text" placeholder = "What to do?" class = "textBox">
-                    <input type = "button" value = "Button" class = "button">
+                    <input type = "button" value = "Button" class = "button form_button">
                 </div>
-                <div class = "input_radio">
-                    <ul>
-                        <li>
-                        <label class = "radio">
-                            <input type = "radio" name = "rb">
-                            <span class = "check"></span><p>This is a list item</p>
-                        </label>
-                        </li>
-                        <li>
-                        <label class = "radio">
-                            <input type = "radio" name = "rb">
-                            <span class = "check"></span><p>Another list item</p>
-                        </label>
-                        </li>
-                        <li>
-                        <label class = "radio">
-                            <input type = "radio" name = "rb">
-                            <span class = "check"></span><p>Yup, another list item</p>
-                        </label>
-                        </li>
-                        <li>
-                        <label class = "radio">
-                            <input type = "radio" name = "rb">
-                            <span class = "check"></span><p>Another list item</p>
-                        </label>
-                        </li>
-                        <li>
-                        <label class = "radio">
-                            <input type = "radio" name = "rb">
-                            <span class = "check"></span><p>This is a list item</p>
-                        </label>
-                        </li>
+                <div class = "input_radio" id = "inp">
+                    <ul class = "check_elements_ul">
+                    </ul>
+                    <button class = "button hide_button">Hide Finished Items</button>
+                    <button class = "button show_button">Show Finished Items</button>
+                    <ul class = "show_hide_buttons">
                     </ul>
                 </div>
             </div>
             <div class = "sidebar_right"><h2>ReactJS</h2></div>
         </div>
+        <script src = "./dist/bundle.js"></script>
     </body>
 </html>

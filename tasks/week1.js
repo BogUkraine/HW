@@ -1,4 +1,4 @@
-/*typeof undefined    //undefined
+typeof undefined    //undefined
 typeof 1            //number
 typeof true         //boolean
 typeof "foo"        //string
@@ -56,8 +56,6 @@ var rooms = {
     { name: 'room3 name4' }
     ]
 };
- console.log(Object.values(rooms));
-
 var namesArray = rooms => {
     var roomsList = Object.values(rooms); // массив комнат
     var allPersonList = roomsList.reduce(function(acc, naxtValue) {
