@@ -1,26 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-// props = {
-//     name: 'John',
-// a: 1,
-// b: 3
-// }
-
-const Root = ({ name, age, children }) => (
-  <div>
-    <h1>Hello, {name}</h1>
-    <div>Another text</div>
-    <div>{age}</div>
-    <div>{children}</div>
-  </div>
-);
-
-// let state = {
-//     turnedOn: false,
-//       another: 777
-// }
-
 class ToggleButton extends Component {
   constructor(props) {
     super(props);
@@ -60,3 +40,23 @@ ReactDOM.render(
   document.getElementById("root")
 );
 console.log(document.getElementById("root"));
+
+const MyName = (props) => (<div>
+  <span>{props.firstName}</span>
+  <span>{props.lastName}</span>
+  <span>{props.age + 3}</span>
+</div>)
+
+const RedText = (props) => (<div style={{color: 'red'}}>{props.children}</div>)
+
+const Root = () => (
+  <div>
+      <h1>Hello, world!{new Date().getDate()}</h1> 
+      <MyName firstName="John1" lastName="Michael" age={18}/> 
+      <RedText><h2>Test </h2></RedText>
+
+  </div>
+);
+
+ReactDOM.render(<Root/> ,document.getElementById('root')
+);
