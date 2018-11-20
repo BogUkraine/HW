@@ -40,6 +40,12 @@ h2 {
 .sidebar_left label:last-child {
     padding-bottom: 30px;
 }
+
+.sidebar_right label:last-child {
+    padding-bottom: 30px;
+}
+
+
 #padd {
     display: flex;
     justify-content: center;

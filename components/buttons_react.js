@@ -1,31 +1,28 @@
-import React, {Component} from "react";
+import React from "react";
 
-export class InputField extends Component {
-    render() {
-        return (
-            <input type = "text" placeholder = "What to do?" class = "textBox"/>
-        );
-    }
-};
+export const InputField = ( ({}) => (
+    <input type="text"
+    placeholder="What to do?"
+    className="textBox"/>
+));
 
-export class InputButton extends Component {
-    render() {
-        return (
-            <input type = "button" value = "Button" class = "button form_button"/>
-        );
-    }
-};
-export class HideButton extends Component {
-    render() {
-        return (
-            <button class = "button hide_button">Hide Finished Items</button>
-        );
-    }
-};
-export class ShowButton extends Component {
-    render() {
-        return (
-            <button class = "button show_button">Show Finished Items</button>
-        );
-    }
-};
+export const InputButton = ( ({postData}) => (
+    <input type="button"
+    value="Button"
+    className="button form_button"
+    onClick={postData}/>
+));
+
+export const HideButton = ( ({action}) => (
+    <button className="button hide_button"
+    onClick={action}>
+        Hide Finished Items
+    </button>
+));
+
+export const ShowButton = ( ({action}) => (
+    <button className="button show_button"
+    onClick={action}>
+        Show Finished Items
+    </button>
+));
