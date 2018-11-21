@@ -40,11 +40,20 @@ export class List extends Component{
         })
         .then((response) => {
             if(response.data.success){
-                const arrayTemp = response.data.todo;
-                this.setState({
-                    arrayElements: [arrayTemp, ... this.state.arrayElements]
-                });
+
+            axios.get('https://learn-front-end-api-212606.appspot.com/api/v1/todos')
+            .then( (response) => {
+                if(response.data.success){
+                    this.setState({
+                        arrayElements: response.data.todos
+                    });
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
             }
+
             else{
                 console.log("Error");
             }
@@ -53,27 +62,6 @@ export class List extends Component{
                 console.log(error);
         });
     }
-
-    /*
-    deleteItem(event, el) {
-        axios.delete('https://learn-front-end-api-212606.appspot.com/api/v1/todos/' + el.id)
-        .then((response) => {
-            if(response.data.success){
-                const arrayTemp = this.state.arrayElements.filter((element) => {
-                    if(element.id !== el.id){
-                        return element;
-                    }
-                });
-                this.setState({
-                    arrayElements: arrayTemp
-                })
-            }
-          })
-        .catch(function (error) {
-            console.log(error);
-          });
-    }
-*/
 
 deleteItem(event, el) {
     axios.delete('https://learn-front-end-api-212606.appspot.com/api/v1/todos/' + el.id)
@@ -156,7 +144,7 @@ deleteItem(event, el) {
                 </div>
 
                 <div className="input_radio">
-                    <CheckedUl classCheck="check_elements_ul"
+                    <CheckedUl isChecked={false}
                     taskList={arrayUnchecked}
                     deleteData={this.deleteItem}
                     updateData={this.changeItem}
@@ -166,7 +154,7 @@ deleteItem(event, el) {
 
                     <ShowButton action={this.actionShowButton}/>
 
-                    <CheckedUl classCheck="show_hide_buttons"
+                    <CheckedUl isChecked={true}
                     taskList={arrayChecked}
                     deleteData={this.deleteItem}
                     updateData={this.changeItem}
@@ -182,3 +170,79 @@ ReactDOM.render(
     <List/>,
     document.getElementById("root")
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    addItem() {
+        const txtBox = document.getElementsByClassName('textBox')[1].value
+        axios.post('https://learn-front-end-api-212606.appspot.com/api/v1/todos', {
+            text: txtBox
+        })
+        .then((response) => {
+            if(response.data.success){
+
+                const arrayTemp = response.data.todo;
+                this.setState({
+                    arrayElements: [arrayTemp, ... this.state.arrayElements]
+                });
+            }
+            else{
+                console.log("Error");
+            }
+        })
+        .catch(function (error) {
+                console.log(error);
+        });
+    }
+
+
+    deleteItem(event, el) {
+        axios.delete('https://learn-front-end-api-212606.appspot.com/api/v1/todos/' + el.id)
+        .then((response) => {
+            if(response.data.success){
+                const arrayTemp = this.state.arrayElements.filter((element) => {
+                    if(element.id !== el.id){
+                        return element;
+                    }
+                });
+                this.setState({
+                    arrayElements: arrayTemp
+                })
+            }
+          })
+        .catch(function (error) {
+            console.log(error);
+          });
+    }
+*/

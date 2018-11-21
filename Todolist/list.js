@@ -2,6 +2,7 @@ import axios from "axios";
 const textBox = document.querySelector('.textBox');
 const ul_checked = document.querySelector('.show_hide_buttons');
 const ul_unchecked = document.querySelector('.check_elements_ul');
+ul_checked.setAttribute('class', 'checked_elements_ul');
 
 export const createListItem = (todo) => {
     const item = document.createElement('li');
@@ -17,6 +18,7 @@ export const createListItem = (todo) => {
     input.setAttribute('type', 'checkbox');
     span.setAttribute('class', 'check');
     delete_span.setAttribute('class', 'delete_sp');
+    ul_unchecked.setAttribute('class', 'unchecked_elements_ul');
 
     ul_unchecked.appendChild(item);
     item.appendChild(label);
@@ -52,14 +54,9 @@ export const createListItem = (todo) => {
             if(response.data.success){
                 if(input.checked == true){
                     ul_checked.appendChild(item);
-                    p.style.textDecoration = 'line-through';
-                    p.style.opacity = '0.5';
                 }
                 else{
                     ul_unchecked.appendChild(item);
-                    item.style.visibility = "visible";
-                    p.style.textDecoration = 'none';
-                    p.style.opacity = '1';
                 }
             }
           })

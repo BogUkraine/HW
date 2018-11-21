@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import {Item} from "./item_react.js";
 
-export const CheckedUl = ( ({taskList, classCheck, deleteData, updateData, visibility}) => {
+export const CheckedUl = ( ({taskList, isChecked, deleteData, updateData, visibility}) => {
     if(visibility){
         return(
-            <ul className={classCheck}>
+            <ul className={isChecked ? 'checked_elements_ul' : 'unchecked_elements_ul'}>
             {
                 taskList.map((value) => {
                         return (
