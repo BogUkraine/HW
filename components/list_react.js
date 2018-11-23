@@ -9,7 +9,8 @@ export class List extends Component{
         super(props);
         this.state = {
             arrayElements: [],
-            isVisible: true
+            isVisible: true,
+            textBoxValue: ''
         }
 
         this.addItem = this.addItem.bind(this);
@@ -17,6 +18,7 @@ export class List extends Component{
         this.changeItem = this.changeItem.bind(this);
         this.actionHideButton = this.actionHideButton.bind(this);
         this.actionShowButton = this.actionShowButton.bind(this);
+        this.onInputChange = this.onInputChange.bind(this);
     }
 
     componentDidMount() {
@@ -34,9 +36,8 @@ export class List extends Component{
     }
 
     addItem() {
-        const txtBox = document.getElementsByClassName('textBox')[1].value
         axios.post('https://learn-front-end-api-212606.appspot.com/api/v1/todos', {
-            text: txtBox
+            text: this.state.textBoxValue
         })
         .then((response) => {
             if(response.data.success){
@@ -123,6 +124,12 @@ deleteItem(event, el) {
         })
     }
 
+    onInputChange(event){
+        this.setState({
+            textBoxValue: event.target.value
+        })
+    }
+
     render() {
         const arrayChecked = this.state.arrayElements.filter((element) => {
             if(element.done === true){
@@ -139,7 +146,7 @@ deleteItem(event, el) {
                 <h2>ReactJS</h2>
 
                 <div className="input_button">
-                    <InputField/>
+                    <InputField onValueChange={this.onInputChange}/>
                     <InputButton postData={this.addItem}/>
                 </div>
 
@@ -159,7 +166,6 @@ deleteItem(event, el) {
                     deleteData={this.deleteItem}
                     updateData={this.changeItem}
                     visibility={this.state.isVisible}/>
-
                 </div>
             </div>
         );

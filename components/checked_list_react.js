@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import {Item} from "./item_react.js";
 
 export const CheckedUl = ( ({taskList, isChecked, deleteData, updateData, visibility}) => {

@@ -1,9 +1,10 @@
 import React from "react";
 
-export const InputField = ( ({}) => (
+export const InputField = ( ({onValueChange}) => (
     <input type="text"
     placeholder="What to do?"
-    className="textBox"/>
+    className="textBox"
+    onChange={onValueChange}/>
 ));
 
 export const InputButton = ( ({postData}) => (

@@ -100,22 +100,18 @@ label {
 }
 
 .delete_sp {
+    text-align: center;
     width: 15px;
     height: 15px;
     color: #6565bf;
     transform: scale(1.6,1.6);
     position: relative;
-    left: 300px;
-    /* херня*/
+    left: 350px;
+    cursor: pointer;
 }
-
 .unchecked_elements_ul {
     text-decoration: none;
     opacity: 1;
-}
-
-.checked_elements_ul {
-
 }
 
 .checked_elements_ul p {
