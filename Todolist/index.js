@@ -1,8 +1,11 @@
 import axios from "axios";
+
 import "./homework_1.css";
 import {add_button} from "./button_add.js";
 import {hide_button, show_button}  from "./buttons.js";
-import {createListItem} from "./list.js"
+import {createListItem} from "./list.js";
+import "../components/list_react";
+
 
 axios.get('https://learn-front-end-api-212606.appspot.com/api/v1/todos')
   .then(function (response) {
@@ -11,11 +14,12 @@ axios.get('https://learn-front-end-api-212606.appspot.com/api/v1/todos')
             createListItem(element);
         });
     }
-    console.log(response);
+    //console.log(response);
   })
   .catch(function (error) {
     console.log(error);
   });
+
 
 window.addEventListener('load', () => {
     add_button();

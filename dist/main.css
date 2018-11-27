@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-wrap: wrap;
  }
+
  .wrapper > * {
     flex: 1 100%;
 }
@@ -40,6 +41,12 @@ h2 {
 .sidebar_left label:last-child {
     padding-bottom: 30px;
 }
+
+.sidebar_right label:last-child {
+    padding-bottom: 30px;
+}
+
+
 #padd {
     display: flex;
     justify-content: center;
@@ -93,20 +100,23 @@ label {
 }
 
 .delete_sp {
+    text-align: center;
     width: 15px;
     height: 15px;
     color: #6565bf;
     transform: scale(1.6,1.6);
     position: relative;
-    left: 300px;
-    /* херня*/
+    left: 350px;
+    cursor: pointer;
+}
+.unchecked_elements_ul {
+    text-decoration: none;
+    opacity: 1;
 }
 
-.check_elements_ul {
-    margin-bottom: 2px;
-}
-.check_elements_li {
-
+.checked_elements_ul p {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 .input_radio ul{
     font-size: 16px;
